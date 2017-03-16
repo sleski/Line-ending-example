@@ -20,8 +20,10 @@ public class SimpleFileGeneratorTest {
 
 		Path resourceDirectory = Paths.get("src/test/resources");
 		File tempFile = new File(resourceDirectory.toFile(), "test.txt");
-		System.out.println("Current line separator is = " + System.lineSeparator());
-		System.setProperty("line.separator", "\r\n");
+		//UNIX
+		//System.setProperty("line.separator", "\n");
+		//WINDOWS
+		//System.setProperty("line.separator", "\r\n");
 		final String sampleText = "This is line nb: ";
 		final List<String> toSave = new ArrayList<String>();
 		for (int counter = 0; counter < 4; counter++) {
